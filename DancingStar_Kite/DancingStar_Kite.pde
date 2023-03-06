@@ -69,7 +69,7 @@ float v2 = -10;
 
 
 void setup(){
-  size(1080,1080); 
+  size(1080,1080, P2D); 
   frameRate(60);
   background(0);
 
