@@ -86,9 +86,6 @@ void setup(){
 
 void draw() {
   
-  //dibujamos el background
-  //backGroundLines(amplitud);
-  
   //background de circulos
   
   Hanabi hb = new Hanabi(amplitud);
@@ -111,11 +108,11 @@ void draw() {
   //este circulo es para dar efecto de difumninado, por eso es importante el alpha, su tamaño debe ser igual al maximo alcanzado por el mandala
   fill(0, 50);
   noStroke();
-  //Para el fondo hanabi
+  //Para los fondos y efectos de este
   rectMode(CENTER);
   rect(width/2,height/2, width, height);
-  //Para el fondo lineas
-  //circle(width/2,height/2, ellipseSize);
+  fill(0, 25);
+  circle(width/2,height/2, ellipseSize);
   
   //llevamos siempre la figura al centro
   translate(width/2, height/2);

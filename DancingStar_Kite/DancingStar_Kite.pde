@@ -6,7 +6,6 @@ import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 
 // Global variables
-FFT fft;
 Minim minim;  
 AudioPlayer player;
 
@@ -89,33 +88,14 @@ void draw() {
   //dibujamos el background
   backGroundLines();
   
-  //background de circulos
-  
-  //Hanabi hb = new Hanabi(amplitud);
-  //Hanabi hb2 = new Hanabi(amplitud);
-  //Hanabi hb3 = new Hanabi(amplitud);
-  ////la tercera será una mezcla de ambos noise
-  //float hbPosX = positions.get(int(noise(v) *positions.size())).x;
-  //float hbPosX2 = positions.get(int(noise(v2) *positions.size())).x;
-  //v += noiseInc;
-  //v2 += noiseInc;
-  //float hbPosY = positions.get(int(noise(v) *positions.size())).y;
-  //float hbPosY2 = positions.get(int(noise(v2) *positions.size())).y;
-  
-  ////Para que no todas vayan vertical invertimos x y y
-  //hb.drawHanabi(hbPosX,hbPosY, colores[int(random(colores.length))]);
-  //hb2.drawHanabi(hbPosY2,hbPosX2, colores[int(random(colores.length))]);
-  //hb3.drawHanabi(hbPosX2,hbPosY, colores[int(random(colores.length))]);
-  //bg.drawBg(positions);
-  
   //este circulo es para dar efecto de difumninado, por eso es importante el alpha, su tamaño debe ser igual al maximo alcanzado por el mandala
   fill(0, 50);
   noStroke();
-  //Para el fondo hanabi
+  //Para el fondo y efectos
   rectMode(CENTER);
   rect(width/2,height/2, width, height);
-  //Para el fondo lineas
-  //circle(width/2,height/2, ellipseSize);
+  fill(0);
+  circle(width/2,height/2, ellipseSize);
   
   //llevamos siempre la figura al centro
   translate(width/2, height/2);
