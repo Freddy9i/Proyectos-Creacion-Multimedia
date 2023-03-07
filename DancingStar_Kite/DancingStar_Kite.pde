@@ -20,16 +20,24 @@ color[] tonoAmarillo = {#FAEE01, #E0D500, #ADA500, #7A7401};
 //color[] colores = tonoRojo;
 
 //triada 
-//color[] colores = concat(concat(tonoRojo, tonoNaranja), tonoAmarillo);
-//color[] colores = concat(concat(tonoVerde, tonoAzul), tonoMorado);
+color[] triada1 = concat(concat(tonoRojo, tonoNaranja), tonoAmarillo);
+color[] triada2 = concat(concat(tonoVerde, tonoAzul), tonoMorado);
 
 //escala total
-color[] colores = {#00E00F, #01FA10, #00AD0C, #006B07, #003EFA, #0038E0, #002BAD, #001C70, #C800FA, #B400E0, #8B00AD, #61007A, #FA0008, #E00007, #AD0006, #700105, #FA5700, #E04F00, #AD3D00, #752800, #FAEE01, #E0D500, #ADA500, #7A7401};
-//color[] colores = {#003EFA, #0038E0, #002BAD, #001C70, #00E00F, #01FA10, #00AD0C, #006B07, #FAEE01, #E0D500, #ADA500, #7A7401, #FA5700, #E04F00, #AD3D00, #752800, #FA0008, #E00007, #AD0006, #700105, #C800FA, #B400E0, #8B00AD, #61007A};
-//color[] colores = {#FAEE01, #E0D500, #ADA500, #7A7401, #FA5700, #E04F00, #AD3D00, #752800, #FA0008, #E00007, #AD0006, #700105, #C800FA, #B400E0, #8B00AD, #61007A, #003EFA, #0038E0, #002BAD, #001C70, #00E00F, #01FA10, #00AD0C, #006B07};
-//color[] colores = {#C800FA, #B400E0, #8B00AD, #61007A, #003EFA, #0038E0, #002BAD, #001C70, #00E00F, #01FA10, #00AD0C, #006B07, #FAEE01, #E0D500, #ADA500, #7A7401, #FA5700, #E04F00, #AD3D00, #752800, #FA0008, #E00007, #AD0006, #700105};
-//color[] colores = {#FA0008, #E00007, #AD0006, #700105, #C800FA, #B400E0, #8B00AD, #61007A, #003EFA, #0038E0, #002BAD, #001C70, #00E00F, #01FA10, #00AD0C, #006B07, #FAEE01, #E0D500, #ADA500, #7A7401, #FA5700, #E04F00, #AD3D00, #752800};
-//color[] colores = {#00E00F, #01FA10, #00AD0C, #006B07, #FAEE01, #E0D500, #ADA500, #7A7401, #FA5700, #E04F00, #AD3D00, #752800, #FA0008, #E00007, #AD0006, #700105, #C800FA, #B400E0, #8B00AD, #61007A, #003EFA, #0038E0, #002BAD, #001C70};
+color[] colores1 = {#00E00F, #01FA10, #00AD0C, #006B07, #003EFA, #0038E0, #002BAD, #001C70, #C800FA, #B400E0, #8B00AD, #61007A, #FA0008, #E00007, #AD0006, #700105, #FA5700, #E04F00, #AD3D00, #752800, #FAEE01, #E0D500, #ADA500, #7A7401};
+color[] colores2 = {#003EFA, #0038E0, #002BAD, #001C70, #00E00F, #01FA10, #00AD0C, #006B07, #FAEE01, #E0D500, #ADA500, #7A7401, #FA5700, #E04F00, #AD3D00, #752800, #FA0008, #E00007, #AD0006, #700105, #C800FA, #B400E0, #8B00AD, #61007A};
+color[] colores3 = {#FAEE01, #E0D500, #ADA500, #7A7401, #FA5700, #E04F00, #AD3D00, #752800, #FA0008, #E00007, #AD0006, #700105, #C800FA, #B400E0, #8B00AD, #61007A, #003EFA, #0038E0, #002BAD, #001C70, #00E00F, #01FA10, #00AD0C, #006B07};
+color[] colores4 = {#C800FA, #B400E0, #8B00AD, #61007A, #003EFA, #0038E0, #002BAD, #001C70, #00E00F, #01FA10, #00AD0C, #006B07, #FAEE01, #E0D500, #ADA500, #7A7401, #FA5700, #E04F00, #AD3D00, #752800, #FA0008, #E00007, #AD0006, #700105};
+color[] colores5 = {#FA0008, #E00007, #AD0006, #700105, #C800FA, #B400E0, #8B00AD, #61007A, #003EFA, #0038E0, #002BAD, #001C70, #00E00F, #01FA10, #00AD0C, #006B07, #FAEE01, #E0D500, #ADA500, #7A7401, #FA5700, #E04F00, #AD3D00, #752800};
+color[] colores6 = {#00E00F, #01FA10, #00AD0C, #006B07, #FAEE01, #E0D500, #ADA500, #7A7401, #FA5700, #E04F00, #AD3D00, #752800, #FA0008, #E00007, #AD0006, #700105, #C800FA, #B400E0, #8B00AD, #61007A, #003EFA, #0038E0, #002BAD, #001C70};
+
+ArrayList <color[]> paletasDeColores = new ArrayList<color[]>();
+
+//color inicial
+color[] colores;
+int indexInitColor = 8;
+
+
 color tono;
 float amplitud;
 float tonalidadInf, tonalidadSup;
@@ -73,7 +81,26 @@ void setup(){
   //size(width,height, P2D); 
   frameRate(60);
   background(0);
+  
+  //adicion de paletas de colores
+  paletasDeColores.add(tonoAmarillo);
+  paletasDeColores.add(tonoNaranja);
+  paletasDeColores.add(tonoRojo);
+  paletasDeColores.add(tonoMorado);
+  paletasDeColores.add(tonoAzul);
+  paletasDeColores.add(tonoVerde);
+  paletasDeColores.add(triada1);
+  paletasDeColores.add(triada2);
+  paletasDeColores.add(colores1);
+  paletasDeColores.add(colores2);
+  paletasDeColores.add(colores3);
+  paletasDeColores.add(colores4);
+  paletasDeColores.add(colores5);
+  paletasDeColores.add(colores6);
 
+  //definir color incial
+  colores = paletasDeColores.get(indexInitColor);
+  
   //Aqui se cambia la pista
   minim = new Minim(this);
   player = minim.loadFile("song4.mp3");
@@ -110,4 +137,32 @@ void draw() {
   
   //dibujo mandala
   mandala();
+}
+
+void keyReleased() {
+  //Cambio de color
+
+  if (key == CODED){
+    if (keyCode == LEFT){
+      if (indexInitColor > 0)
+      {
+        indexInitColor -= 1;
+      } else
+      {
+        indexInitColor = paletasDeColores.size() - 1;
+      }
+    }else if (keyCode == RIGHT){
+      if (indexInitColor < paletasDeColores.size() - 1)
+      {
+        indexInitColor += 1;
+      } else
+      {
+        indexInitColor = 0;
+      }
+    }
+  }
+  
+  //definir color
+  colores = paletasDeColores.get(indexInitColor);
+
 }
