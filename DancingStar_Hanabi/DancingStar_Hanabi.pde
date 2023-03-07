@@ -63,14 +63,15 @@ color colorLinea = 0, colorLinea2 = 0, colorLinea3 = 0;
 //variables backgroundPunteado
 ArrayList <PVector> positions = new ArrayList<PVector>(); 
 BackgroundPoints bg;
-int bgGrid = 20;
+int bgGrid = 21;
 float v = 0.0;
 float noiseInc = 0.02;
 float v2 = -10;
 
 
 void setup(){
-  size(1080,1080, P2D); 
+  fullScreen(P2D);
+  //size(1080,1080, P2D); 
   frameRate(60);
   background(0);
 

@@ -69,7 +69,8 @@ float v2 = -10;
 
 
 void setup(){
-  size(1080,1080, P2D); 
+  fullScreen(P2D);
+  //size(width,height, P2D); 
   frameRate(60);
   background(0);
 
