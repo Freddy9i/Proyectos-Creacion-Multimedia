@@ -74,7 +74,7 @@ int bgGrid = 20;
 float v = 0.0;
 float noiseInc = 0.02;
 float v2 = -10;
-
+int numCancion = 0;
 
 void setup(){
   fullScreen(P2D);
@@ -159,6 +159,12 @@ void keyReleased() {
       {
         indexInitColor = 0;
       }
+    }else if (keyCode == UP){
+      numCancion += 1;
+      numCancion %= 6;
+        player.pause();
+        player = minim.loadFile("song"+numCancion+".mp3");
+        player.play();
     }
   }
   
