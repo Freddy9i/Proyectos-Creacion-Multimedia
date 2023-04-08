@@ -17,3 +17,9 @@ El trabajo logrado muestra como varía el comportamiento de nuestro elemento pri
 
 Finalmente, y con la intención de añadir aleatoriedad y un fondo para las visuales, se emplearon como fuente de inspiración los ejemplos de los enlaces 3, 4 y 5  y se crearon 2 versiones del proyecto, una a partir del tercer enlace (carpeta DancingStar_Hanabi) y otra a partir del cuarto y quinto enlace (carpeta DancingStar_Kite).
 
+Proyectos imagen:
+[DancingStar Kite](https://drive.google.com/file/d/1xCbpK3hGxBdUTleS3rWIpl4BFYb5tWgD/view?usp=sharing)
+[DancingStar Hanabi](https://drive.google.com/file/d/1ou7Ebcri7nM0en6dMcTFNX-b438tfHsn/view?usp=sharing)
+
+Proyectos de audio:
+[DancingStar PureStar](https://drive.google.com/file/d/1dynHlAHI1Z_pem5gNM73WoZgN9iQZFu6/view?usp=sharing)
