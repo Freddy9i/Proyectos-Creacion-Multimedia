@@ -29,4 +29,4 @@ DancingStar Kite: https://drive.google.com/file/d/1xCbpK3hGxBdUTleS3rWIpl4BFYb5t
 DancingStar Hanabi: https://drive.google.com/file/d/1ou7Ebcri7nM0en6dMcTFNX-b438tfHsn/view?usp=sharing
 
 Video del proyecto de generación de audio:
-DancingStar PureStar: https://drive.google.com/file/d/1dynHlAHI1Z_pem5gNM73WoZgN9iQZFu6/view?usp=sharing
+DancingStar PureStar: https://drive.google.com/file/d/1YVtOHE9EI0QV4MuQsobY0ilGSCeG-fGC/view?usp=sharing
