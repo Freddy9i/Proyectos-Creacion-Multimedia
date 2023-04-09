@@ -11,7 +11,7 @@ Referencias utilizadas para el desarrollo del proyecto de generación de imagen:
 4) https://www.instagram.com/p/CpQpEeSrwaK/?igshid=YmMyMTA2M2Y%3D
 5) https://www.instagram.com/p/CpW9WYpORdZ/?igshid=YmMyMTA2M2Y%3D
 
-Descripción fuente de inspiración para el desarrolo del proyecto de generación de imagen: 
+Descripción fuente de inspiración para el desarrollo del proyecto de generación de imagen: 
 
 La idea tras este proyecto surgió a partir del tutorial del primer enlace, el cual hace uso de los datos de un archivo de audio para la generación de visuales. Partiendo de este punto se utilizaron como guía los tutoriales de Processing del segundo enlace y se implementó la figura central de las visuales y todos los aspectos técnicos relacionados al color y a su movimiento.
 
@@ -22,7 +22,7 @@ Finalmente, y con la intención de añadir aleatoriedad y un fondo para las visu
 Referencias utilizadas para el desarrollo del proyecto de generación de audio:
 1) https://abletunes.com/product/sample-packs/free-trap-samples-drum-kits#
 
-Descripción fuente de inspiración para el desarrolo del proyecto de generación de audio: 
+Descripción fuente de inspiración para el desarrollo del proyecto de generación de audio: 
 
 
 Videos del proyecto de generación de imagen:
