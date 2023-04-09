@@ -29,7 +29,7 @@ void mandala(){
     // float ampGama = int(map(amplitud,minr2,minr2,colores.length-1,1));
     // color colorStar = colores[int(map(i,0,steps,ampGama, colores.length-1))]; 
     
-    fill(0, tono);
+    fill(blancos[0], tono);
     pushMatrix();
     rotate(rotationRatio * i * PI / 90);
     //de grande a pequeña
