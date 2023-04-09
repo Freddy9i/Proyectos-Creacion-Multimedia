@@ -20,6 +20,7 @@ El trabajo logrado muestra como varía el comportamiento de nuestro elemento pri
 
 Finalmente, y con la intención de añadir aleatoriedad y un fondo para las visuales, se emplearon como fuente de inspiración los ejemplos de los enlaces 3, 4 y 5  y se crearon 2 versiones del proyecto, una a partir del tercer enlace (carpeta DancingStar_Hanabi) y otra a partir del cuarto y quinto enlace (carpeta DancingStar_Kite).
 
+
 Referencias utilizadas para el desarrollo del proyecto de generación de audio:
 1) https://abletunes.com/product/sample-packs/free-trap-samples-drum-kits#
 
