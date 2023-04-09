@@ -24,6 +24,7 @@ Referencias utilizadas para el desarrollo del proyecto de generación de audio:
 
 Descripción fuente de inspiración para el desarrolo del proyecto de generación de audio: 
 
+
 Videos del proyecto de generación de imagen:
 DancingStar Kite: https://drive.google.com/file/d/1xCbpK3hGxBdUTleS3rWIpl4BFYb5tWgD/view?usp=sharing
 DancingStar Hanabi: https://drive.google.com/file/d/1ou7Ebcri7nM0en6dMcTFNX-b438tfHsn/view?usp=sharing
