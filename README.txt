@@ -13,11 +13,16 @@ Referencias utilizadas para el desarrollo del proyecto de generación de imagen:
 
 
 Descrición fuente de inspiración para el desarrolo del proyecto de generación de imagen: 
+
 La idea tras este proyecto surgió a partir del tutorial del primer enlace, el cual hace uso de los datos de un archivo de audio para la generación de visuales. Partiendo de este punto se utilizaron como guía los tutoriales de Processing del segundo enlace y se implementó la figura central de las visuales y todos los aspectos técnicos relacionados al color y a su movimiento.
 
 El trabajo logrado muestra como varía el comportamiento de nuestro elemento principal (estrella) en función de los tonos musicales percibidos en la pista de audio en un momento determinado, así que, por ejemplo, el comportamiento frente a tonos suaves refleja poco movimiento y una sensación de calma en la estrella, mientras que el comportamiento frente a tonos fuertes o explosivos en la pista de audio, muestra como la estrella adquiere una conducta más caótica y con mayor destello de colores.
 
 Finalmente, y con la intención de añadir aleatoriedad y un fondo para las visuales, se emplearon como fuente de inspiración los ejemplos de los enlaces 3, 4 y 5  y se crearon 2 versiones del proyecto, una a partir del tercer enlace (carpeta DancingStar_Hanabi) y otra a partir del cuarto y quinto enlace (carpeta DancingStar_Kite).
+
+Referencias utilizadas para el desarrollo del proyecto de generación de audio:
+1) https://abletunes.com/product/sample-packs/free-trap-samples-drum-kits#
+
 
 Descrición fuente de inspiración para el desarrolo del proyecto de generación de audio: 
 
