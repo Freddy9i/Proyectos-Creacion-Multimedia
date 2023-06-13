@@ -6,7 +6,7 @@
 
 ---
 
-# Proyecto final - Multimedia Interactiva
+# Proyecto Final - Multimedia Interactiva
 
 ## Referencias utilizadas:
 1. https://www.minijuegos.com/juego/arkanoid-online
@@ -27,7 +27,7 @@ Luego de finalizar cada partida en cualquiera de los 3 minijuegos disponibles, e
 
 ---
 
-# Proyecto de generación de imágenes
+# Proyecto de Generación de Imágenes
 
 ## Referencias utilizadas:
 1. https://www.generativehut.com/post/using-processing-for-music-visualization
@@ -49,7 +49,7 @@ Finalmente, y con la intención de añadir aleatoriedad y un fondo para las visu
 
 ---
 
-# Proyecto de generación de audio
+# Proyecto de Generación de Audio
 
 ## Referencias utilizadas:
 - https://abletunes.com/product/sample-packs/free-trap-samples-drum-kits#
