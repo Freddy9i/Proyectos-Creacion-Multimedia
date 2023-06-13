@@ -2,17 +2,23 @@ import oscP5.*;
 OscP5 oscP5;
 int port = 2020;
 
+// Imagenes del arkanoid
+PImage bloque, playerBlock, playerBall;
+PImage arkanoidBackground;
+
 class Rectangulo {
   float x;
   float y;
   float ancho;
   float alto;
+  PImage sprite;
   
   public Rectangulo(float x, float y, float ancho, float alto) {
     this.x = x;
     this.y = y;
     this.ancho = ancho;
     this.alto = alto;
+    this.sprite = playerBlock;
   }
 }
 
@@ -21,12 +27,12 @@ ArrayList<Rectangulo> bordesYJugador = new ArrayList<Rectangulo>(); //jugador = 
 
 int anchoPantalla = 1000;
 int altoPantalla = 800;
-int tamañoCuadrados = anchoPantalla/40;
+int tamañoCuadrados = anchoPantalla/30;
 int cantidadFilasCuadrados = 10;
 int anchoBarraJugador = tamañoCuadrados*4;
 int tamañoBola = tamañoCuadrados/2;
 float bolaPosicionInicialX = anchoPantalla/2;
-float bolaPosicionInicialY = altoPantalla-10*tamañoCuadrados;
+float bolaPosicionInicialY = altoPantalla-5*tamañoCuadrados;
 float bolaPosicionX = bolaPosicionInicialX;
 float bolaPosicionY = bolaPosicionInicialY;
 float velocidadBolaX = -4;
@@ -40,12 +46,18 @@ void settings() {
 void setup() {
   oscP5 = new OscP5(this, port);
   
+  // Imagenes arkanoid
+  bloque = loadImage("Block.png");
+  playerBall = loadImage("Ball.png");
+  playerBlock = loadImage("Platform.png");
+  arkanoidBackground = loadImage("arkanoid_background.jpg");
+  
   //agregando bordes de pantalla y jugador
   bordesYJugador.add(new Rectangulo(0, -10, anchoPantalla, 10));
   bordesYJugador.add(new Rectangulo(-10, 0, 10, altoPantalla));
   bordesYJugador.add(new Rectangulo(anchoPantalla, 0, 10, altoPantalla));
   //barra jugador
-  bordesYJugador.add(new Rectangulo((anchoPantalla/2)-(anchoBarraJugador/2), bolaPosicionY+tamañoCuadrados, anchoBarraJugador, 10));
+  bordesYJugador.add(new Rectangulo((anchoPantalla/2)-(anchoBarraJugador/2), bolaPosicionY+tamañoCuadrados, anchoBarraJugador, 20));
   
   //agregando cuadrados de juego
   inicializarCuadradosDeJuego();
@@ -53,6 +65,7 @@ void setup() {
 
 void draw() {
   background(0);
+  image(arkanoidBackground, 0, 0, anchoPantalla, altoPantalla);
   
   verificarColisiones(cuadradosDeJuego, true);
   verificarColisiones(bordesYJugador, false);
@@ -61,12 +74,12 @@ void draw() {
   for (int i = 0; i < cuadradosDeJuego.size(); i++) {
     Rectangulo rectangulo = cuadradosDeJuego.get(i);
     fill(0, 0, 255);
-    rect(rectangulo.x, rectangulo.y, rectangulo.ancho, rectangulo.alto);  
+    image(bloque, rectangulo.x, rectangulo.y, rectangulo.ancho, rectangulo.alto);  
   }
   for (int i = 0; i < bordesYJugador.size(); i++) {
     Rectangulo rectangulo = bordesYJugador.get(i);
     fill(255, 0, 0);
-    rect(rectangulo.x, rectangulo.y, rectangulo.ancho, rectangulo.alto);  
+    image(rectangulo.sprite,rectangulo.x, rectangulo.y, rectangulo.ancho, rectangulo.alto);  
   }  
 
   //actualizar posición bola
@@ -89,7 +102,7 @@ void draw() {
 
   //dibujar bola
   fill(0, 255, 0);
-  rect(bolaPosicionX, bolaPosicionY, tamañoBola, tamañoBola);
+  image(playerBall, bolaPosicionX, bolaPosicionY, tamañoBola, tamañoBola);
   
   //texto vidas
   textSize(40);
@@ -99,10 +112,13 @@ void draw() {
 
 
 void oscEvent(OscMessage message) {
-  if(message.checkAddrPattern("/multisense/orientation/roll")){
+  if(message.checkAddrPattern("/multisense/orientation/pitch")){
     Rectangulo jugador = bordesYJugador.get(bordesYJugador.size() - 1);
+    float signal = constrain(Math.abs(message.get(0).floatValue()), 45, 90);
+    float shipAccel = map(signal, 45, 90, 8, -8);
+    println(signal);
     //rectangles.get(rectangles.size() - 1).x = 20;
-    float aux = jugador.x + message.get(0).floatValue();
+    float aux = jugador.x + shipAccel;
     //println(aux);
     
     if (aux<0){
@@ -120,9 +136,11 @@ void oscEvent(OscMessage message) {
 
 void inicializarCuadradosDeJuego(){
   cuadradosDeJuego.clear();
-  for (int x = 0; x < anchoPantalla; x+=tamañoCuadrados) {
+  for (int x = tamañoCuadrados; x < anchoPantalla - tamañoCuadrados*2; x+=tamañoCuadrados*2) {
     for (int y = 0; y < tamañoCuadrados*cantidadFilasCuadrados; y+=tamañoCuadrados) {
-      cuadradosDeJuego.add(new Rectangulo(x, y, tamañoCuadrados, tamañoCuadrados));
+      if (x > y && y < (anchoPantalla - tamañoCuadrados*2) - x){
+        cuadradosDeJuego.add(new Rectangulo(x, y, tamañoCuadrados*2, tamañoCuadrados));
+      }
     }
   }
 }
